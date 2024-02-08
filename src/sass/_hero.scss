@@ -1,0 +1,94 @@
+.hero {
+    margin-top: 6rem;
+    min-height: 80vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, .6),
+        rgba(0, 0, 0, .6)),
+        url('../images/profile-desktop-img.png')
+        center no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    &__content {
+        color: $color-light;
+    }
+
+    &__title {
+        font-size: 4rem;
+
+        @include maxTablet {
+            font-size: 3rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        filter: brightness(95%);
+
+        @include maxTablet {
+            font-size: 1.4rem;
+            padding: 0 2rem;
+        }
+    }
+
+    &__button {
+        background-color: $color-primary;
+        color: $color-light;
+        font-family: inherit;
+        font-size: 2rem;
+        padding: 1.25rem 2.5rem;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: inline-block;
+        transition: all .5s ease;
+
+        &:hover {
+            background: $color-hover;
+            color: $color-dark;
+            -webkit-box-shadow: 0 .3rem 1.2rem rgba($color-light, .3); 
+            box-shadow: 0 .3rem 1.2rem rgba($color-light, .3);
+            letter-spacing: .3rem;
+
+            i {
+                animation: rotate .3s forwards linear;
+            }
+        }
+
+        // Arrow right icon
+        i {
+            margin-left: 1.5rem;
+
+            @include maxTablet {
+                transform: rotate(90deg);
+            }
+        }
+
+        @include maxTablet {
+            font-size: 1.4rem;
+            padding: 1rem 1.8rem;
+        }
+    }
+
+    @media screen and (max-width: 37.5em) {
+        background: linear-gradient(
+            rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .6)),
+            url('../images/profile-mobile-img.png')
+            center no-repeat;
+        background-size: cover;
+    }
+}
+
+// Icon animation
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg)
+    }
+}

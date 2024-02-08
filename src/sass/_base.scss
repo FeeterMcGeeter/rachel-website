@@ -1,0 +1,142 @@
+// ===== Color Variables =====
+$color-primary: #B10F2E;
+$color-light: #fff;
+$color-dark: #262626;
+$color-hover: #DFB718;
+
+// ===== Breakpoint Mixins =====
+// 425px
+@mixin maxPhone {
+    @media screen and (max-width: 26.5625em) {
+        @content;
+    }
+}
+
+// 768px
+@mixin minTablet {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}
+
+@mixin maxTablet {
+    @media screen and (max-width: 48em) {
+        @content;
+    }
+}
+
+// 1200px
+@mixin minDesktop {
+    @media screen and (min-width: 75em) {
+        @content;
+    }
+}
+
+@mixin maxDesktop {
+    @media screen and (max-width: 75em) {
+        @content;
+    }
+}
+
+// ===== Mixins =====
+@mixin flexColCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridContentCenter {
+    display: grid;
+    place-items: center;
+}
+
+// ===== Margins =====
+// Bottom
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 4rem; }
+.mb-lg { margin-bottom: 8rem; }
+
+// Left
+.ml { margin-left: 2rem;}
+
+
+// ===== Global Reset =====
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%; // Setting px size to 10px for easier use of rem
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    color: $color-dark;
+}
+
+.App {
+    height: 100%;
+}
+
+// Container for About, Portfolio, & Contact sections
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+// ===== Typography =====
+// Section titles
+.heading-1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.4rem;
+
+    @include maxTablet {
+        font-size: 2.8rem;
+    }
+}
+
+// Sub section titles
+.heading-2 {
+    text-align: center;
+    font-size: 2.8rem;
+    background: linear-gradient(to right, $color-dark, $color-primary, #eb153e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include maxTablet {
+        font-size: 2.4rem;
+    }
+}
+
+// Card & Project titles
+.heading-3 {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    color: $color-primary;
+}
+
+// Bold text
+.bold {
+    font-weight: 700;
+}
+
+// ===== Centering =====
+.center {
+    @include flexColCenter;
+}

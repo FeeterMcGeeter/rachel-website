@@ -1,0 +1,46 @@
+.inspiration {
+
+    // Blockquote & video container
+    &__content {
+        
+        @include maxTablet {
+            margin: 0 3rem;
+        }
+    }
+
+    // Blockquote
+    &__text {
+        width: 60%;
+        margin: 0 auto 3rem auto;
+        background-color: $color-primary;
+        color: $color-light;
+        font-size: 1.4rem;
+        border-radius: .25rem;
+        padding: 2rem;
+        text-align: left;
+
+        @include maxTablet {
+            width: 100%;
+        }
+    }
+
+    // Video player
+    &__player-wrapper {
+        margin: 0 auto;
+        width: 45%;
+        height: 25rem;
+
+        @include maxTablet {
+            width: 80%;
+        }
+
+        @include maxPhone {
+            width: 100%;
+        }
+    }
+
+    &__video {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}

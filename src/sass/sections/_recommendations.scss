@@ -1,0 +1,42 @@
+.recommendations {
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    &__letter {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        padding: 2rem;
+        border-radius: .25rem;
+        background-color: $color-primary;
+        color: $color-light;
+    }
+
+    .info-list {
+        list-style-type: none;
+        display: flex;
+
+        @include maxTablet {
+            flex-direction: column;
+        }
+    }
+
+    .info-item {
+        font-weight: 700;
+
+        &:not(:last-child) {
+            border-right: .1rem solid rgba($color-light, .7);
+            padding-right: 1rem;
+            margin-right: 1rem;
+
+            @include maxTablet {
+                border-right: none;
+                padding-right: 0;
+                margin-right: 0;
+                
+                &:not(:last-child) {
+                    margin-bottom: .25rem;
+                }
+            }
+        }
+    }
+}

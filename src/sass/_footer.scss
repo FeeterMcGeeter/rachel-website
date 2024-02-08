@@ -1,0 +1,61 @@
+.footer {
+    min-height: 10rem;
+    background-color: $color-dark;
+    color: $color-light;
+    font-size: 1.4rem;
+    position: relative;
+    @include flexCenter;
+
+    // scrollToTop button
+    &__btn-toTop {
+        background-color: $color-primary;
+        border-radius: .25rem;
+        position: absolute;
+        top: -1.5rem;
+        cursor: pointer;
+        
+        i {
+            color: $color-light;
+            padding: 1rem;
+        }
+    }
+
+    // Logo, powered by, and copyright content
+    &__content {
+        padding: 3rem 0 2rem 0;
+        @include flexColCenter;
+    }
+
+    &__logo {
+        margin-bottom: .5rem;
+        font-size: 2rem;
+
+        span {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $color-primary;
+        }
+    }
+
+    &__powered-by {
+        margin-bottom: .5rem;
+
+        span {
+            margin: 0 .25rem 0 .5rem;
+        }
+
+        i {
+            color: $color-primary;
+        }
+    }
+
+    &__copyright {
+
+
+        span {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 .5rem;
+        }
+    }
+}
